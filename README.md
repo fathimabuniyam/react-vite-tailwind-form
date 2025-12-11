@@ -1,75 +1,90 @@
-# React + TypeScript + Vite
+# Form - React + TypeScript + Vite + TailwindCSS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Add User flow built using React, TypeScript, TailwindCSS, and Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ✅ Reusable form components
+  - Input
+  - Select
+  - Checkbox
+  - File Upload
+- ✅ JSON config used for form building
+- ✅ Full TypeScript type-safety
+- ✅ Tailwind utility-based UI
+- ✅ Form Data stored in Redux
+- ✅ Clean folder structure and separation of concerns
 
-## React Compiler
+---
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- ✅ Next button disabled until all mandatory fields complete
+- ✅ Previous button always enabled
+- ✅ Summary tab shows all form data in design layout
+- ✅ Form submission only from Summary tab
+- ✅ Use JSON for form building
+- ✅ Form Data stored in Redux
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+- ✅ Form validation done on each tab submission
+- ✅ Loading states for file uploads
+- ✅ Mobile-responsive
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Documentation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Reusable Form Components
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- FormInput – text inputs and textarea
+- FormSelect – dropdown select
+- FormCheckbox – boolean selection
+- FormFileUpload – single and multiple file upload
+- FormLayout – shared wrapper that shows label, error, required badge
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Step Indicator
+
+- Used to show the progress of form tabs
+- Once forms are valid and tab is visited - it gets marked
+- Can go back to previous steps by clicking on tab also
+
+### Button
+
+- Four color variants : Primary (blue) , secondary (outlined blue), error (outlined red), disabled (grey)
+- Default button element
+
+## Folder Structure
+
+- src
+  - components _(common components)_
+  - constants
+  - pages _(main modules)_
+  - store _(redux files)_
+  - types _(type files)_
+  - util _(utility files)_
+
+## Running
+
+Install dependencies:
+
+```bash
+  yarn
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Start development:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+  yarn dev
 ```
+
+## Screenshots
+
+![Application Information Tab](https://github.com/fathimabuniyam/react-vite-tailwind-form/blob/main/src/assets/screenshots/1.png)
+
+![Purpose and Documents Tab](https://github.com/fathimabuniyam/react-vite-tailwind-form/blob/main/src/assets/screenshots/2.png)
+
+![Purpose and Documents Filled](https://github.com/fathimabuniyam/react-vite-tailwind-form/blob/main/src/assets/screenshots/3.png)
+
+![Additional Information Tab Filled](https://github.com/fathimabuniyam/react-vite-tailwind-form/blob/main/src/assets/screenshots/4.png)
+
+![Summary Tab View 1](https://github.com/fathimabuniyam/react-vite-tailwind-form/blob/main/src/assets/screenshots/5.png)
+
+![Summary Tab View 2](https://github.com/fathimabuniyam/react-vite-tailwind-form/blob/main/src/assets/screenshots/6.png)
