@@ -6,8 +6,7 @@ export const trainingFields: AllFormFields[] = [
     label: 'Complete ATS Route',
     type: 'text',
     required: true,
-    placeholder:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    placeholder: '',
     conditional: {
       field: 'purpose',
       value: 'Training',
@@ -18,8 +17,7 @@ export const trainingFields: AllFormFields[] = [
     label: 'Circuit Landing Count',
     type: 'text',
     required: true,
-    placeholder:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    placeholder: '',
     conditional: {
       field: 'purpose',
       value: 'Training',
@@ -30,8 +28,7 @@ export const trainingFields: AllFormFields[] = [
     label: 'Training Session Schedule',
     type: 'text',
     required: true,
-    placeholder:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    placeholder: '',
     conditional: {
       field: 'purpose',
       value: 'Training',
@@ -42,8 +39,7 @@ export const trainingFields: AllFormFields[] = [
     label: 'Ground Handling Confirmation',
     type: 'text',
     required: true,
-    placeholder:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    placeholder: '',
     conditional: {
       field: 'purpose',
       value: 'Training',
