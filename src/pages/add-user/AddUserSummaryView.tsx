@@ -27,8 +27,8 @@ const AddUserSummaryView: React.FC<Props> = ({ formData }) => {
   const renderValue = (value: any): string | JSX.Element => {
     if (Array.isArray(value)) {
       if (value.length === 0) return 'None';
+
       if (value[0] instanceof File) {
-        // Return a bulleted list of file names
         return renderFile(value);
       }
       return value.join(', ');

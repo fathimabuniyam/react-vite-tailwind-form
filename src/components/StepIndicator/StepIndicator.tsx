@@ -24,7 +24,7 @@ const StepIndicator: React.FC<StepIndicatorProps> = ({
         onClick={() => onTabChange(index)}
       >
         <div
-          className={`flex items-center p-2 pr-4 rounded-3xl min-w-fit md:min-w-[200px] ${
+          className={`flex items-center p-1 lg:p-2 pr-2 lg:pr-4 rounded-3xl min-w-fit lg:min-w-[200px] ${
             isSelected
               ? 'bg-blue-900 text-white'
               : isComplete
@@ -34,7 +34,7 @@ const StepIndicator: React.FC<StepIndicatorProps> = ({
         >
           {/* Icon */}
           <div
-            className={`w-8 h-8 rounded-full flex items-center justify-center font-medium text-sm ${
+            className={`w-8 h-8 rounded-full flex items-center justify-center font-medium text-xs lg:text-sm ${
               isComplete ? 'bg-white' : 'bg-white text-blue-900'
             }`}
           >
@@ -46,7 +46,11 @@ const StepIndicator: React.FC<StepIndicatorProps> = ({
           </div>
 
           {/* Title */}
-          <span className={`ml-2 text-sm font-medium`}>{tab}</span>
+          <span
+            className={`ml-2 text-xs hidden md:block lg:text-sm font-medium`}
+          >
+            {tab}
+          </span>
         </div>
 
         {/* Connector */}

@@ -38,6 +38,7 @@ const AddUserFooter: React.FC<AddUserFooterProps> = ({ isTabComplete }) => {
         // Check 2: Does it match validation pattern?
         else if (field.validation?.pattern && typeof value === 'string') {
           const pattern = new RegExp(field.validation.pattern);
+
           if (!pattern.test(value)) {
             newErrors[field.id] = field.validation.message || 'Invalid format';
             isValid = false;
