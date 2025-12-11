@@ -73,7 +73,7 @@ const AddUserFooter: React.FC<AddUserFooterProps> = ({ isTabComplete }) => {
 
   return (
     currentTab < addUserTabsInitial.length - 1 && (
-      <div className="flex justify-between pt-6 border-t border-t-blue-200">
+      <div className="flex justify-between pt-6 border-t border-t-gray-200">
         {currentTab !== 0 && (
           <Button type="button" color="secondary" onClick={handlePrevious}>
             ← Previous

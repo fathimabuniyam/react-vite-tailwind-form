@@ -102,11 +102,13 @@ const FormFileUpload: React.FC<FormFileUploadProps> = ({
                 Upload
               </span>
             </div>
-            <CirclePlus
-              className="w-9 h-9 text-[#0095da]"
-              stroke="#FFFFFF"
-              fill="currentColor"
-            />
+            {field.multiple && (
+              <CirclePlus
+                className="w-9 h-9 text-[#0095da]"
+                stroke="#FFFFFF"
+                fill="currentColor"
+              />
+            )}
           </div>
           <input
             type="file"
