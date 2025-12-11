@@ -16,7 +16,7 @@ const FormCheckbox: React.FC<FormCheckboxProps> = ({
 }) => {
   return (
     <div className="flex flex-col">
-      <label className="flex items-center space-x-2 text-sm font-medium">
+      <label className="flex items-center space-x-2 text-md">
         <input
           type="checkbox"
           checked={value || false}
@@ -25,7 +25,7 @@ const FormCheckbox: React.FC<FormCheckboxProps> = ({
         />
         <span>{field.label}</span>
       </label>
-      {error && <p className="text-red-600 text-xs">{error}</p>}
+      {error && <p className="text-red-600 text-xs mt-2">{error}</p>}
     </div>
   );
 };
