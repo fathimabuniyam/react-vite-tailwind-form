@@ -54,7 +54,7 @@ export const addUserTabs: Array<{
         label: 'Country',
         type: 'select',
         options: countries,
-        placeholder: 'eg: Qatar',
+        placeholder: 'Select a country',
         required: true,
       },
       {
@@ -95,6 +95,7 @@ export const addUserTabs: Array<{
       {
         id: 'purpose',
         label: 'Purpose',
+        placeholder: 'Select a purpose',
         type: 'select',
         required: true,
         options: [

@@ -33,11 +33,15 @@ const FormSelect: React.FC<FormSelectProps> = ({
         id={field.id}
         value={value || ''}
         onChange={handleChange}
-        className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${error ? 'border-red-500' : 'border-gray-300'}`}
+        className={`w-full px-3 py-2 border rounded-md
+          ${value ? '' : 'text-gray-400'}
+          focus:outline-none focus:ring-2 focus:ring-blue-500
+          ${error ? 'border-red-500' : 'border-gray-300'}
+        `}
       >
         {field.options?.map((option: string) => (
           <option key={option} value={option}>
-            {option || 'Select an option'}
+            {option || field.placeholder || 'Select an option'}
           </option>
         ))}
       </select>
