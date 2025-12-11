@@ -24,7 +24,7 @@ const FormInput: React.FC<FormInputProps> = ({
   };
 
   const baseClasses =
-    'w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 !text-black dark:!text-white';
+    'w-full px-3 py-2 border rounded-md bg-white dark:bg-gray-800 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500';
   const errorClasses = error ? 'border-red-500' : 'border-gray-300';
 
   const renderInput = () => {
