@@ -1,0 +1,172 @@
+import type { AllFormFields } from '../../../types/form.types';
+
+export const cargoFields: AllFormFields[] = [
+  {
+    id: 'registrationDocumentCopy',
+    label: 'Registration Document Copy',
+    type: 'file',
+    required: true,
+    multiple: false,
+    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    conditional: {
+      field: 'purpose',
+      value: 'Cargo',
+    },
+  },
+  {
+    id: 'medicalFitnessDocument',
+    label: 'Medical Fitness Document',
+    type: 'file',
+    required: true,
+    multiple: true,
+    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    conditional: {
+      field: 'purpose',
+      value: 'Cargo',
+    },
+  },
+  {
+    id: 'consigneeAuthorizationNote',
+    label: 'Consignee Authorization Note',
+    type: 'file',
+    required: true,
+    multiple: true,
+    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    conditional: {
+      field: 'purpose',
+      value: 'Cargo',
+    },
+  },
+  {
+    id: 'airworthinessComplianceRecord',
+    label: 'Airworthiness Compliance Record',
+    type: 'file',
+    required: true,
+    multiple: true,
+    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    conditional: {
+      field: 'purpose',
+      value: 'Cargo',
+    },
+  },
+  {
+    id: 'airworthinessCertificates',
+    label: 'Airworthiness Certificates',
+    type: 'file',
+    required: true,
+    multiple: true,
+    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    conditional: {
+      field: 'purpose',
+      value: 'Cargo',
+    },
+  },
+  {
+    id: 'operatorLicenseDetails',
+    label: 'Operator License Details',
+    type: 'file',
+    required: true,
+    multiple: true,
+    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    conditional: {
+      field: 'purpose',
+      value: 'Cargo',
+    },
+  },
+  {
+    id: 'hullInsuranceDetails',
+    label: 'Hull Insurance Details',
+    type: 'file',
+    required: true,
+    multiple: true,
+    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    conditional: {
+      field: 'purpose',
+      value: 'Cargo',
+    },
+  },
+  {
+    id: 'acousticComplianceRecord',
+    label: 'Acoustic Compliance Record',
+    type: 'file',
+    required: true,
+    multiple: false,
+    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    conditional: {
+      field: 'purpose',
+      value: 'Cargo',
+    },
+  },
+  {
+    id: 'registrationEvidenceFile',
+    label: 'Registration Evidence File',
+    type: 'file',
+    required: true,
+    multiple: false,
+    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    conditional: {
+      field: 'purpose',
+      value: 'Cargo',
+    },
+  },
+  {
+    id: 'waybillIdentifier',
+    label: 'Waybill Identifier',
+    type: 'file',
+    required: true,
+    multiple: false,
+    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    conditional: {
+      field: 'purpose',
+      value: 'Cargo',
+    },
+  },
+  {
+    id: 'coverageCertificate',
+    label: 'Coverage Certificate',
+    type: 'file',
+    required: true,
+    multiple: false,
+    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    conditional: {
+      field: 'purpose',
+      value: 'Cargo',
+    },
+  },
+  {
+    id: 'importClearancePermit',
+    label: 'Import Clearance Permit',
+    type: 'file',
+    required: true,
+    multiple: false,
+    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    conditional: {
+      field: 'purpose',
+      value: 'Cargo',
+    },
+  },
+  {
+    id: 'hazardousCargoDeclaration',
+    label: 'Hazardous Cargo Declaration',
+    type: 'file',
+    required: true,
+    multiple: false,
+    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    conditional: {
+      field: 'purpose',
+      value: 'Cargo',
+    },
+  },
+  {
+    id: 'technicalReleaseConfirmation',
+    label: 'Technical Release Confirmation',
+    type: 'text',
+    required: true,
+    placeholder:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    conditional: {
+      field: 'purpose',
+      value: 'Cargo',
+    },
+  },
+];
