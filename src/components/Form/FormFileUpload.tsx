@@ -54,7 +54,9 @@ const FormFileUpload: React.FC<FormFileUploadProps> = ({
         className="flex items-center border border-gray-300 px-3 py-2 rounded"
       >
         <FileTextIcon size={17} />
-        <span className="text-[15px] truncate mx-2">{file.name}</span>
+        <span className="text-[15px] truncate text-black mx-2">
+          {file.name}
+        </span>
         <button
           type="button"
           onClick={() => removeFile(index)}
@@ -85,7 +87,7 @@ const FormFileUpload: React.FC<FormFileUploadProps> = ({
           {/* Input with Plus */}
           <div className="flex flex-row items-center">
             <div
-              className={`flex flex-row items-center border rounded-md text-[15px] pl-4 min-w-[300px]
+              className={`flex flex-row items-center border rounded-md text-[15px] pl-4 min-w-[300px] text-black
               ${isUploading ? 'bg-gray-100' : 'bg-white hover:bg-blue-200'}
               ${error ? 'border-red-500' : 'border-gray-300'}
             `}

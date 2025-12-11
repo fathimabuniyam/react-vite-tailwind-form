@@ -32,7 +32,7 @@ const FormInput: React.FC<FormInputProps> = ({
             value={value || ''}
             onChange={handleChange}
             placeholder={field.placeholder}
-            className={`w-full px-3 py-2 text-black border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${error ? 'border-red-500' : 'border-gray-300'}`}
+            className={`w-full px-3 py-2 text-black! border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${error ? 'border-red-500' : 'border-gray-300'}`}
             rows={4}
           />
         );
@@ -45,7 +45,7 @@ const FormInput: React.FC<FormInputProps> = ({
             value={value || ''}
             onChange={handleChange}
             placeholder={field.placeholder}
-            className={`w-full px-3 py-2 text-black border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${error ? 'border-red-500' : 'border-gray-300'}`}
+            className={`w-full px-3 py-2 text-black! border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${error ? 'border-red-500' : 'border-gray-300'}`}
           />
         );
     }
