@@ -23,6 +23,10 @@ const FormInput: React.FC<FormInputProps> = ({
     onChange(e.target.value);
   };
 
+  const baseClasses =
+    'w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 !text-black dark:!text-white';
+  const errorClasses = error ? 'border-red-500' : 'border-gray-300';
+
   const renderInput = () => {
     switch (field.type) {
       case 'textarea':
@@ -32,7 +36,7 @@ const FormInput: React.FC<FormInputProps> = ({
             value={value || ''}
             onChange={handleChange}
             placeholder={field.placeholder}
-            className={`w-full px-3 py-2 text-black! border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${error ? 'border-red-500' : 'border-gray-300'}`}
+            className={`${baseClasses} ${errorClasses}`}
             rows={4}
           />
         );
@@ -45,7 +49,7 @@ const FormInput: React.FC<FormInputProps> = ({
             value={value || ''}
             onChange={handleChange}
             placeholder={field.placeholder}
-            className={`w-full px-3 py-2 text-black! border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${error ? 'border-red-500' : 'border-gray-300'}`}
+            className={`${baseClasses} ${errorClasses}`}
           />
         );
     }
