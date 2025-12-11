@@ -1,4 +1,5 @@
 import type { AllFormFields } from '../../../types/form.types';
+import { FileAcceptTypes } from '../../../util/File.util';
 
 export const medicalFields: AllFormFields[] = [
   {
@@ -7,7 +8,7 @@ export const medicalFields: AllFormFields[] = [
     type: 'file',
     required: true,
     multiple: false,
-    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    accept: FileAcceptTypes,
     conditional: {
       field: 'purpose',
       value: 'Medical',
@@ -19,7 +20,7 @@ export const medicalFields: AllFormFields[] = [
     type: 'file',
     required: true,
     multiple: false,
-    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    accept: FileAcceptTypes,
     conditional: {
       field: 'purpose',
       value: 'Medical',

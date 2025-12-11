@@ -1,4 +1,5 @@
 import type { AllFormFields } from '../../../types/form.types';
+import { FileAcceptTypes } from '../../../util/File.util';
 
 export const businessFields: AllFormFields[] = [
   {
@@ -7,7 +8,7 @@ export const businessFields: AllFormFields[] = [
     type: 'file',
     required: true,
     multiple: true,
-    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    accept: FileAcceptTypes,
     conditional: {
       field: 'purpose',
       value: 'Business',
@@ -19,7 +20,7 @@ export const businessFields: AllFormFields[] = [
     type: 'file',
     required: true,
     multiple: true,
-    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    accept: FileAcceptTypes,
     conditional: {
       field: 'purpose',
       value: 'Business',
@@ -31,7 +32,7 @@ export const businessFields: AllFormFields[] = [
     type: 'file',
     required: true,
     multiple: true,
-    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    accept: FileAcceptTypes,
     conditional: {
       field: 'purpose',
       value: 'Business',
@@ -43,7 +44,7 @@ export const businessFields: AllFormFields[] = [
     type: 'file',
     required: true,
     multiple: false,
-    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    accept: FileAcceptTypes,
     conditional: {
       field: 'purpose',
       value: 'Business',
@@ -55,7 +56,7 @@ export const businessFields: AllFormFields[] = [
     type: 'file',
     required: true,
     multiple: false,
-    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    accept: FileAcceptTypes,
     conditional: {
       field: 'purpose',
       value: 'Business',

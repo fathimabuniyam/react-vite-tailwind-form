@@ -1,4 +1,5 @@
 import type { AllFormFields } from '../../../types/form.types';
+import { FileAcceptTypes } from '../../../util/File.util';
 
 export const cargoFields: AllFormFields[] = [
   {
@@ -7,7 +8,7 @@ export const cargoFields: AllFormFields[] = [
     type: 'file',
     required: true,
     multiple: false,
-    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    accept: FileAcceptTypes,
     conditional: {
       field: 'purpose',
       value: 'Cargo',
@@ -19,7 +20,7 @@ export const cargoFields: AllFormFields[] = [
     type: 'file',
     required: true,
     multiple: true,
-    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    accept: FileAcceptTypes,
     conditional: {
       field: 'purpose',
       value: 'Cargo',
@@ -31,7 +32,7 @@ export const cargoFields: AllFormFields[] = [
     type: 'file',
     required: true,
     multiple: true,
-    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    accept: FileAcceptTypes,
     conditional: {
       field: 'purpose',
       value: 'Cargo',
@@ -43,7 +44,7 @@ export const cargoFields: AllFormFields[] = [
     type: 'file',
     required: true,
     multiple: true,
-    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    accept: FileAcceptTypes,
     conditional: {
       field: 'purpose',
       value: 'Cargo',
@@ -55,7 +56,7 @@ export const cargoFields: AllFormFields[] = [
     type: 'file',
     required: true,
     multiple: true,
-    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    accept: FileAcceptTypes,
     conditional: {
       field: 'purpose',
       value: 'Cargo',
@@ -67,7 +68,7 @@ export const cargoFields: AllFormFields[] = [
     type: 'file',
     required: true,
     multiple: true,
-    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    accept: FileAcceptTypes,
     conditional: {
       field: 'purpose',
       value: 'Cargo',
@@ -79,7 +80,7 @@ export const cargoFields: AllFormFields[] = [
     type: 'file',
     required: true,
     multiple: true,
-    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    accept: FileAcceptTypes,
     conditional: {
       field: 'purpose',
       value: 'Cargo',
@@ -91,7 +92,7 @@ export const cargoFields: AllFormFields[] = [
     type: 'file',
     required: true,
     multiple: false,
-    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    accept: FileAcceptTypes,
     conditional: {
       field: 'purpose',
       value: 'Cargo',
@@ -103,7 +104,7 @@ export const cargoFields: AllFormFields[] = [
     type: 'file',
     required: true,
     multiple: false,
-    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    accept: FileAcceptTypes,
     conditional: {
       field: 'purpose',
       value: 'Cargo',
@@ -115,7 +116,7 @@ export const cargoFields: AllFormFields[] = [
     type: 'file',
     required: true,
     multiple: false,
-    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    accept: FileAcceptTypes,
     conditional: {
       field: 'purpose',
       value: 'Cargo',
@@ -127,7 +128,7 @@ export const cargoFields: AllFormFields[] = [
     type: 'file',
     required: true,
     multiple: false,
-    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    accept: FileAcceptTypes,
     conditional: {
       field: 'purpose',
       value: 'Cargo',
@@ -139,7 +140,7 @@ export const cargoFields: AllFormFields[] = [
     type: 'file',
     required: true,
     multiple: false,
-    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    accept: FileAcceptTypes,
     conditional: {
       field: 'purpose',
       value: 'Cargo',
@@ -151,7 +152,7 @@ export const cargoFields: AllFormFields[] = [
     type: 'file',
     required: true,
     multiple: false,
-    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    accept: FileAcceptTypes,
     conditional: {
       field: 'purpose',
       value: 'Cargo',

@@ -74,10 +74,8 @@ const FormFileUpload: React.FC<FormFileUploadProps> = ({
       </label>
 
       {value && value.length > 0 && (
-        <div className="my-2">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 space-y-1">
-            {value.map((file, index) => renderAddedFile(file, index))}
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 space-y-1 my-2">
+          {value.map((file, index) => renderAddedFile(file, index))}
         </div>
       )}
 

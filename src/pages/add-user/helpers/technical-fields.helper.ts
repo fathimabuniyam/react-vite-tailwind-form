@@ -1,4 +1,5 @@
 import type { AllFormFields } from '../../../types/form.types';
+import { FileAcceptTypes } from '../../../util/File.util';
 
 export const technicalFields: AllFormFields[] = [
   {
@@ -7,7 +8,7 @@ export const technicalFields: AllFormFields[] = [
     type: 'file',
     required: true,
     multiple: false,
-    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    accept: FileAcceptTypes,
     conditional: {
       field: 'purpose',
       value: 'Technical',
@@ -19,7 +20,7 @@ export const technicalFields: AllFormFields[] = [
     type: 'file',
     required: true,
     multiple: false,
-    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    accept: FileAcceptTypes,
     conditional: {
       field: 'purpose',
       value: 'Technical',
@@ -41,7 +42,7 @@ export const technicalFields: AllFormFields[] = [
     type: 'file',
     required: true,
     multiple: false,
-    accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+    accept: FileAcceptTypes,
     conditional: {
       field: 'accommodationBookingProof',
       value: true,

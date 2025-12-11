@@ -1,5 +1,6 @@
 import { countries } from '../../constants/countries.constant';
 import type { AllFormFields } from '../../types/form.types';
+import { FileAcceptTypes } from '../../util/File.util';
 import { businessFields } from './helpers/business-fields.helper';
 import { cargoFields } from './helpers/cargo-fields.helper';
 import { medicalFields } from './helpers/medical-fields.helper';
@@ -131,7 +132,7 @@ export const addUserTabs: Array<{
         type: 'file',
         required: false,
         multiple: true,
-        accept: '.pdf,.doc,.docx,.png,.jpeg,.jpg',
+        accept: FileAcceptTypes,
       },
     ],
   },
