@@ -18,7 +18,7 @@ import AddUserSummary from './AddUserSummary';
 const AddUser: React.FC = () => {
   const dispatch = useDispatch();
 
-  const { currentTab, formData, errors, isSubmitting, fileUploads } =
+  const { currentTab, formData, errors, isSubmitting } =
     useSelector(selectForm);
 
   const handleFieldChange = (field: string, value: any) => {
