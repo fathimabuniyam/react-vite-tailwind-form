@@ -1,7 +1,7 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
 
 type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
-  color: 'primary' | 'secondary' | 'disabled';
+  color: 'primary' | 'secondary' | 'disabled' | 'error';
   children: ReactNode;
 };
 
@@ -11,6 +11,7 @@ const Button = ({ color, children, disabled, className, ...props }: Props) => {
     secondary:
       'bg-white border border-gray-300 text-blue-600 hover:bg-gray-200',
     disabled: 'bg-gray-200 text-gray-400 cursor-not-allowed',
+    error: 'bg-white border border-red-300 text-red-600 hover:bg-gray-200',
   };
 
   return (

@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   resetForm,
+  resetVisitedTabs,
   selectForm,
   setErrors,
   setSubmitting,
@@ -41,6 +42,7 @@ const AddUser: React.FC = () => {
     alert('Application submitted successfully!');
 
     dispatch(resetForm());
+    dispatch(resetVisitedTabs());
     dispatch(setSubmitting(false));
   };
 
@@ -138,7 +140,7 @@ const AddUser: React.FC = () => {
         <AddUserFooter isTabComplete={isTabComplete} />
 
         {isSubmitting && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="fixed inset-0 bg-[#00000087] flex items-center justify-center">
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <div className="flex items-center">
                 <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>

@@ -31,6 +31,9 @@ const userSlice = createSlice({
         state.visitedTabs.push(action.payload);
       }
     },
+    resetVisitedTabs: (state) => {
+      state.visitedTabs = [0];
+    },
     updateFormData: (
       state,
       action: PayloadAction<{ field: string; value: any }>,
@@ -73,6 +76,7 @@ export const selectForm = (state: { user: FormState }) => state.user;
 export const {
   setCurrentTab,
   markTabVisited,
+  resetVisitedTabs,
   updateFormData,
   setErrors,
   clearErrors,
