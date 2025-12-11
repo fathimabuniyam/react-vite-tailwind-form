@@ -1,6 +1,10 @@
 import { useDispatch } from 'react-redux';
 import StepIndicator from '../../components/StepIndicator';
-import { clearErrors, setCurrentTab } from '../../store/slices/add-user.slice';
+import {
+  clearErrors,
+  markTabVisited,
+  setCurrentTab,
+} from '../../store/slices/add-user.slice';
 import { addUserTabsInitial } from './AddUser.helper';
 
 type AddUserStepIndicatorsProps = {
@@ -21,6 +25,7 @@ const AddUserStepIndicators: React.FC<AddUserStepIndicatorsProps> = ({
       onTabChange={(index) => {
         if (index < currentTab || isTabComplete(currentTab)) {
           dispatch(setCurrentTab(index));
+          dispatch(markTabVisited(index));
           dispatch(clearErrors());
         }
       }}

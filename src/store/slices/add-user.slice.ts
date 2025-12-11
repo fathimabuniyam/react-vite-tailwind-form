@@ -3,6 +3,7 @@ import type { UserFormData } from '../../types/user.types';
 
 interface FormState {
   currentTab: number;
+  visitedTabs: number[];
   formData: UserFormData;
   errors: Record<string, string>;
   isSubmitting: boolean;
@@ -11,6 +12,7 @@ interface FormState {
 
 const initialState: FormState = {
   currentTab: 0,
+  visitedTabs: [0],
   formData: {},
   errors: {},
   isSubmitting: false,
@@ -23,6 +25,11 @@ const userSlice = createSlice({
   reducers: {
     setCurrentTab: (state, action: PayloadAction<number>) => {
       state.currentTab = action.payload;
+    },
+    markTabVisited: (state, action: PayloadAction<number>) => {
+      if (!state.visitedTabs.includes(action.payload)) {
+        state.visitedTabs.push(action.payload);
+      }
     },
     updateFormData: (
       state,
@@ -65,6 +72,7 @@ export const selectForm = (state: { user: FormState }) => state.user;
 
 export const {
   setCurrentTab,
+  markTabVisited,
   updateFormData,
   setErrors,
   clearErrors,

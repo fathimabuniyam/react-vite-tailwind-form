@@ -12,15 +12,18 @@ const StepIndicator: React.FC<StepIndicatorProps> = ({
   tabs,
   currentTab,
   onTabChange,
+  isTabComplete,
 }) => {
   const renderTab = (tab: string, index: number) => {
     const isSelected = index === currentTab;
-    const isComplete = index < currentTab;
+    const isComplete = isTabComplete(index); // ✅ use actual completion
 
     return (
       <div
         key={index}
-        className={`flex items-center cursor-default ${index === tabs.length - 1 ? '' : 'flex-1'}`}
+        className={`flex items-center cursor-default ${
+          index === tabs.length - 1 ? '' : 'flex-1'
+        }`}
         onClick={() => onTabChange(index)}
       >
         <div
@@ -65,11 +68,7 @@ const StepIndicator: React.FC<StepIndicatorProps> = ({
     );
   };
 
-  return (
-    <div className="flex flex-wrap mb-8">
-      {tabs.map((tab, index) => renderTab(tab, index))}
-    </div>
-  );
+  return <div className="flex flex-wrap mb-8">{tabs.map(renderTab)}</div>;
 };
 
 export default StepIndicator;

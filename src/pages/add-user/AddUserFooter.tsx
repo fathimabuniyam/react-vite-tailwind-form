@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Button from '../../components/Button';
 import {
   clearErrors,
+  markTabVisited,
   selectForm,
   setCurrentTab,
   setErrors,
@@ -60,6 +61,7 @@ const AddUserFooter: React.FC<AddUserFooterProps> = ({ isTabComplete }) => {
   const handleNext = () => {
     if (validateTab(currentTab) && currentTab < addUserTabsInitial.length - 1) {
       dispatch(setCurrentTab(currentTab + 1));
+      dispatch(markTabVisited(currentTab + 1));
       dispatch(clearErrors());
     }
   };

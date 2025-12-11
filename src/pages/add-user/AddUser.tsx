@@ -18,7 +18,7 @@ import AddUserSummary from './AddUserSummary';
 const AddUser: React.FC = () => {
   const dispatch = useDispatch();
 
-  const { currentTab, formData, errors, isSubmitting } =
+  const { currentTab, visitedTabs, formData, errors, isSubmitting } =
     useSelector(selectForm);
 
   const handleFieldChange = (field: string, value: any) => {
@@ -53,26 +53,29 @@ const AddUser: React.FC = () => {
   };
 
   const isTabComplete = (tabIndex: number): boolean => {
+    // Only consider a tab if it has been visited
+    if (!visitedTabs.includes(tabIndex)) return false;
+
     const tabFields = addUserTabs[tabIndex]?.fields || [];
 
+    // If tab has no required fields, treat as complete after visiting
+    const hasRequiredFields = tabFields.some((field) => field.required);
+    if (!hasRequiredFields) return true;
+
     return tabFields.every((field: any) => {
-      // If field is NOT required; no validation
       if (!field.required) return true;
 
       // Conditional fields
       if (field.conditional) {
         const { field: cField, value: cValue } = field.conditional;
         const shouldShow = formData[cField] === cValue;
-
         if (!shouldShow) return true; // bypass validation if not shown
       }
 
       const value = formData[field.id];
 
-      // File validation
-      if (field.type === 'file') {
+      if (field.type === 'file')
         return Array.isArray(value) && value.length > 0;
-      }
 
       return !!value;
     });
